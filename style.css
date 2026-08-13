@@ -600,3 +600,36 @@ body::after {
         opacity: 0; /* يختفي لما يوصل فوق */
     }
 }
+/* ============================================
+   📱 تظبيط مقاسات الموبايل (Mobile Responsiveness)
+   ============================================ */
+@media (max-width: 768px) {
+    /* 1. تصغير اللوجو العائم عشان مياخدش مساحة الشاشة */
+    .floating-logo {
+        width: 60px;
+        height: 60px;
+        bottom: 15px;
+        right: 15px;
+        border-width: 2px;
+    }
+
+    /* 2. تصغير أيقونات الخلفية المتحركة عشان متعملش زحمة */
+    .tech-icon {
+        font-size: 1.5rem;
+    }
+
+    /* 3. تصغير اسم التيم والمسافات عشان تناسب الشاشة */
+    .team-name {
+        font-size: clamp(2.2rem, 8vw, 3rem);
+    }
+    
+    .intro-section {
+        padding: 20px 15px 40px;
+    }
+
+    /* 4. منع أي سكرول بالعرض بسبب الأنيميشن */
+    body, html {
+        overflow-x: hidden;
+        width: 100%;
+    }
+}
